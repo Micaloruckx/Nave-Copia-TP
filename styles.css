@@ -73,7 +73,7 @@ a{
 
 .header__nav a:hover{
     background-color: var(--color-pricipal-300_fondo);
-    transition: background-color 0.1s ease-in-out 0.1s;
+    transition: background-color 0.2s ease-in-out;
 }
 
 /* --HEADER-FUNCIONES DERECHA-- */
@@ -121,19 +121,19 @@ a{
     background-color: var(--color-pricipal-300_fondo);
     border-color: var(--color-principal-800);
     color: var(--color-principal-850_violeta-oscuro);
-    transition: background-color 0.1s ease-in-out 0.1s;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .btn-empty{
     color: var(--color-principal-800);
-    transition: background-color 0.3s ease-in-out 0.1s;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .btn-empty:hover,
 .bienvenida_tarjeta:hover .bi{
     color: #360C72;
     background-color: var(--color-pricipal-300_fondo);
-    transition: background-color 0.3s ease-in-out 0.1s;
+    transition: background-color 0.3s ease-in-out;
 }
 
 /*--CUERPO-BIENVENIDA--*/
@@ -183,6 +183,7 @@ p{
     padding: 20px;
     border-radius: 20px;
     text-align: left;
+    margin-bottom: 0px;
 }
 .bienvenida_tarjeta:hover{
     transform: translateY(-5px);
@@ -209,6 +210,7 @@ i.bi{
 /*--MAIN-MEDIO DE COBRO IDEAL--*/
 .main__medio-cobro p{
     font-size: 13px;
+    font-weight: 530;
 }
 
 .main__medio-cobro{
@@ -216,7 +218,7 @@ i.bi{
     flex-direction: column;
     flex-wrap: wrap;
     gap: 40px;
-    padding-left: 4vh;
+    padding-left: 3.5vh;
     justify-content: center;
 
 }
@@ -225,51 +227,70 @@ i.bi{
     display: flex;
     background-color: var(--color-principal-50);
     width: 127vh;
-    height: 43vh;
+    height: 42vh;
     border-radius: 30px;
     align-items: center;
     justify-content: space-between;
-    padding: 7px;
+    padding: 8px;
 }
 
 .main__medio-cobro-tarjeta h2{
-    font-weight: 550;
+    font-weight: 600;
     font-family: "Inter",Arial,Helvetica,sans-serif;
     margin: 13px;
-    margin-bottom: 3vh;
+    margin-bottom: 3.2vh;
     font-size: 27px;
+    padding-top: 9vh;
 }
 
 .main__medio-cobro-tarjeta p{
     margin: 13px;
-    margin-bottom: 12vh;
-    font-size: 15.5px;
+    margin-bottom: 11vh;
+    font-size: 16px;
     color: var(--color-principal-900);
+    width: 440px;
+    word-spacing: 0.5px;
+    
 }
 
 .btn-medios{
-    margin-left: 20px;
+    margin-left: 2vh;
+    margin-bottom: 7vh;
 }
 
 .btn-medios:hover{
     background-color: var(--color-principal-850_violeta-oscuro);
     border-color: var(--color-principal-800);
-    transition: background-color 0.1s ease-in-out 0.1s;
+    transition: background-color 0.5s ease-in-out;
     color: var(--color-principal-100);
 }
 
 .main__medio-cobro-tarjeta img{
-    max-width: 460px;
+    max-width: 300px;
     flex: 1;
     justify-content: center;
+    transition: transform 0.3s ease-in-out;
+    overflow-clip-margin: var(--color-principal-850_violeta-oscuro) ;
 }
 
-.medio-cobro-tarjeta1{
+.main__medio-cobro-tarjeta img:hover{
+    transform: scale(1.04);
+}
+
+.medio-cobro-tarjeta1,
+.medio-cobro-tarjeta2{
     text-align: left;
     flex-direction: column;
-
 }
 
-.medio-cobro-tarjeta2{
+.medio-cobro-tarjeta1-img{
+    padding-right: 10vh;
+}
 
+.medio-cobro-tarjeta2-img{
+    padding-left: 10vh;
+}
+
+.medio-cobro-tarjeta2-reverse{
+    flex-direction: row-reverse;
 }
