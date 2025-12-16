@@ -25,9 +25,16 @@ body{
     background-color: var(--color-principal-100);
 }
 
+.container__global{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
 /* --HEADER GLOBAL-- */
 header{
-    height: 100%;
     background-color: var(--color-principal-50);
     z-index: 1000;
     top: 0;
@@ -36,13 +43,15 @@ header{
 
 .header__container{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     border-bottom: solid 1px #e7eaed;
     font-weight: bold;
     font-size: 13px;
-    padding-left: 310px;
-    padding-right: 290px;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 10px;
+    height: 72px;
 }
 
 /* --HEADER-LOGO-- */
@@ -140,11 +149,6 @@ a{
 
 /*--CUERPO-BIENVENIDA--*/
 
-main{
-    margin-left: 39vh;
-    margin-right: 39vh;   
-}
-
 .main__bienvenida,
 .main__medio-cobro{
     text-align: center;
@@ -160,7 +164,7 @@ h1{
 
 h3{
     color: #2C2C2C;
-    font-size: 20px;
+    font-size: 21px;
 }
 
 p{
@@ -171,17 +175,14 @@ p{
 
 .main__bienvenida_tarjetas{
     display: flex;
-    flex-wrap: nowrap;
-    gap: 3.2vh;
-    justify-content: space-between;
-    margin-bottom: 60px;
-    padding-left: 3.5vh;
-    margin-right: 3vh;
+    gap: 24px;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
 .bienvenida_tarjeta{
     background: var(--color-principal-50);
-    min-width: 280px;
+    width: 290px;
     padding: 20px;
     border-radius: 18px;
     text-align: left;
@@ -194,8 +195,8 @@ p{
 }
 
 .bi{
-    width: 55px;
-    height: 55px;
+    width: 52px;
+    height: 52px;
     background: #f3eaff;
     border-radius: 9px;
     margin-bottom: 20px;
@@ -211,30 +212,35 @@ i.bi{
 
 /*--MAIN-HISTORIAS QUE VUELAN--*/
 .main__historias-vuelan{
+    width: 100%;
+    margin: 30px 0;
+}
+
+.historias-vuelan-card{
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #360C72;
     color: var(--color-principal-50);
     border-radius: 28px;
-    width: 125vh;
-    height: 16vh;
-    padding: 7.5vh;
-    margin-left: 1.5vh;
-    margin-bottom: 7vh;
+    padding: 32px 60px;
+    max-width: 930px;
+    margin: 0 auto;
+    margin-bottom: 40px;
 }
 
+
 .historias-vuelan-letras h2{
-    font-size: 1.6em;
+    font-size: 27px;
+    margin-bottom: 8px;
     letter-spacing: -0.5px;
-    padding-bottom: 1vh;
 }
 
 .historias-vuelan-letras p{
-    font-size: 1.1em;
+    font-size: 17px;
     color: var(--color-principal-50);
     letter-spacing: 0.5px;
-    padding-top: 1vh;
+    opacity: .9;
 }
 
 .btn-vuelan{
@@ -249,10 +255,19 @@ i.bi{
 
 /*--MAIN-MEDIO DE COBRO IDEAL--*/
 
-.main__medio-cobro h1,
-.main__medio-cobro p {
-    margin: 0;
-    padding: 0;
+.main__medio-cobro .container__global{
+    display: flex;
+    max-width: 930px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+
+}
+
+.main__medio-cobro h1{
+    font-size: 38px;
+    margin-bottom: 0px;
 }
 
 .main__medio-cobro p{
@@ -263,44 +278,42 @@ i.bi{
 .main__medio-cobro{
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    gap: 40px;
-    justify-content: center;
+    padding: 0px;
+}
+
+.main__medio-cobro .container__global{
+    display: flex;
+    flex-direction: column;
+    gap: 45px; /* separación ENTRE LAS 4 TARJETAS */
 }
 
 .main__medio-cobro-tarjeta{
     display: flex;
     background-color: var(--color-principal-50);
-    width: 127vh;
-    height: 42vh;
     border-radius: 30px;
     align-items: center;
     justify-content: space-between;
-    padding: 8px;
+    padding: 20px;
+    gap: 40px;
+    max-width: 930px;
+    width: 100%;
+    flex-wrap: wrap;
 }
 
 .main__medio-cobro-tarjeta h2{
     font-weight: 600;
     font-family: "Inter",Arial,Helvetica,sans-serif;
-    margin: 13px;
-    margin-bottom: 3.2vh;
     font-size: 27px;
-    padding-top: 9vh;
 }
 
 .main__medio-cobro-tarjeta p{
-    margin: 13px;
-    margin-bottom: 11vh;
+    margin: 14px 0;
     font-size: 16px;
     color: var(--color-principal-900);
-    width: 440px;
+    max-width: 100%;
     word-spacing: 0.5px;
-    
-}
-
-.btn-medios{
-    margin-left: 2vh;
-    margin-bottom: 7vh;
+    text-align: start;
+    padding-bottom: 50px;
 }
 
 .btn-medios:hover{
@@ -324,17 +337,22 @@ i.bi{
 
 .medio-cobro-tarjeta1,
 .medio-cobro-tarjeta2{
-    text-align: left;
+    display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    max-width: 100%;
+    flex: 1 1 320px;
 }
 
-.medio-cobro-tarjeta1-img{
-    padding-right: 10vh;
-}
-
+.medio-cobro-tarjeta1-img,
 .medio-cobro-tarjeta2-img{
-    padding-left: 10vh;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    width: 400px;
 }
+
 
 .medio-cobro-tarjeta2-reverse{
     flex-direction: row-reverse;
@@ -342,16 +360,23 @@ i.bi{
 
 /*--FOOTER--*/
 .footer__container{
+    width: 100%;
     margin-top: 8vh;
     padding-top: 3vh;
-    width: 100%;
+    margin-bottom: 3vh;
     box-sizing: content-box;
     background-color: var(--color-principal-50);
-    padding-left: 39vh;
-    padding-right: 39vh;  
+}
+
+.footer__container .container__global{
+    display: flex;
+    flex-direction: column;
+    max-width: 950px;
+    width: 100%;
 }
 
 .footer__container ul{
+    flex-wrap: nowrap;
     list-style: none;
     padding-top: 1vh;
 }
@@ -359,11 +384,13 @@ i.bi{
 .footer__lista-opciones{
     display: flex;
     align-items: first baseline;
-    gap: 16vh;
+    gap: 50px;
+    flex-wrap: nowrap;
 }
 
 .footer__lista-opciones h3{
     font-size: 0.9em;
+    white-space: nowrap;
 }
 
 .footer__lista-opciones li a{
