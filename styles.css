@@ -94,22 +94,23 @@ a{
 
 .header__functions a,
 .btn-medios{
-    font-size: 13px;
-    font-weight: 600;
     white-space: nowrap;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
     width: 140px;
 }
 
 .btn-pill{
     border: solid 1px var(--color-principal-800);
     width: 147px;
-    height: 38px;
+    height: 40px;
+    font-size: 13px;
+    font-weight: 600;
     padding: 8px 20px;
     border-radius: 50px;
     font-size: 14px;
+    text-align: center;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
 }
 
 .btn-full{
@@ -125,6 +126,7 @@ a{
 }
 
 .btn-empty{
+    background-color: var(--color-principal-50);
     color: var(--color-principal-800);
     transition: background-color 0.3s ease-in-out;
 }
@@ -139,8 +141,8 @@ a{
 /*--CUERPO-BIENVENIDA--*/
 
 main{
-    margin-left: 37vh;
-    margin-right: 40vh;   
+    margin-left: 39vh;
+    margin-right: 39vh;   
 }
 
 .main__bienvenida,
@@ -153,7 +155,7 @@ h1{
     font-weight: 799;
     font-size: 37px;
     color: var(--color-principal-900);
-    margin: 30px;
+    margin-bottom: 3rem;
 }
 
 h3{
@@ -163,17 +165,17 @@ h3{
 
 p{
     color: #6A6A6A;
-    letter-spacing: 1px;
+    letter-spacing: 0.75px;
     line-height: 25px;
 }
 
 .main__bienvenida_tarjetas{
     display: flex;
     flex-wrap: nowrap;
-    gap: 3vh;
+    gap: 3.2vh;
     justify-content: space-between;
     margin-bottom: 60px;
-    padding-left: 3vh;
+    padding-left: 3.5vh;
     margin-right: 3vh;
 }
 
@@ -181,9 +183,10 @@ p{
     background: var(--color-principal-50);
     min-width: 280px;
     padding: 20px;
-    border-radius: 20px;
+    border-radius: 18px;
     text-align: left;
-    margin-bottom: 0px;
+    padding-bottom: 3vh;
+    padding-right: 10px;
 }
 .bienvenida_tarjeta:hover{
     transform: translateY(-5px);
@@ -194,7 +197,7 @@ p{
     width: 55px;
     height: 55px;
     background: #f3eaff;
-    border-radius: 8px;
+    border-radius: 9px;
     margin-bottom: 20px;
     display: flex;
     align-items: center;
@@ -207,7 +210,51 @@ i.bi{
 }
 
 /*--MAIN-HISTORIAS QUE VUELAN--*/
+.main__historias-vuelan{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #360C72;
+    color: var(--color-principal-50);
+    border-radius: 28px;
+    width: 125vh;
+    height: 16vh;
+    padding: 7.5vh;
+    margin-left: 1.5vh;
+    margin-bottom: 7vh;
+}
+
+.historias-vuelan-letras h2{
+    font-size: 1.6em;
+    letter-spacing: -0.5px;
+    padding-bottom: 1vh;
+}
+
+.historias-vuelan-letras p{
+    font-size: 1.1em;
+    color: var(--color-principal-50);
+    letter-spacing: 0.5px;
+    padding-top: 1vh;
+}
+
+.btn-vuelan{
+    border-color: transparent;
+}
+
+.btn-vuelan:hover{
+    background-color: black;
+    color: var(--color-principal-50);
+}
+
+
 /*--MAIN-MEDIO DE COBRO IDEAL--*/
+
+.main__medio-cobro h1,
+.main__medio-cobro p {
+    margin: 0;
+    padding: 0;
+}
+
 .main__medio-cobro p{
     font-size: 13px;
     font-weight: 530;
@@ -218,9 +265,7 @@ i.bi{
     flex-direction: column;
     flex-wrap: wrap;
     gap: 40px;
-    padding-left: 3.5vh;
     justify-content: center;
-
 }
 
 .main__medio-cobro-tarjeta{
@@ -293,4 +338,37 @@ i.bi{
 
 .medio-cobro-tarjeta2-reverse{
     flex-direction: row-reverse;
+}
+
+/*--FOOTER--*/
+.footer__container{
+    margin-top: 8vh;
+    padding-top: 3vh;
+    width: 100%;
+    box-sizing: content-box;
+    background-color: var(--color-principal-50);
+    padding-left: 39vh;
+    padding-right: 39vh;  
+}
+
+.footer__container ul{
+    list-style: none;
+    padding-top: 1vh;
+}
+
+.footer__lista-opciones{
+    display: flex;
+    align-items: first baseline;
+    gap: 16vh;
+}
+
+.footer__lista-opciones h3{
+    font-size: 0.9em;
+}
+
+.footer__lista-opciones li a{
+    color: #2b2b2b;
+    font-size: 0.78em;
+    letter-spacing: 0.5px;
+    line-height: 30px;
 }
