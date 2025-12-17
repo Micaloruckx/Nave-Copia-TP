@@ -21,6 +21,10 @@
     box-sizing: border-box;
 }
 
+html. body {
+    overflow-x: hidden;
+}
+
 body {
     background-color: var(--color-principal-100);
 }
@@ -39,7 +43,7 @@ header {
     z-index: 1000;
     top: 0;
     position: sticky;
-    width: 99vw;
+    width: 100vw;
 }
 
 .header__container {
@@ -133,6 +137,7 @@ a {
 .btn-full {
     background-color: var(--color-principal-800);
     color: #FCFBFF;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .btn-full:hover {
@@ -195,7 +200,7 @@ p {
     border-radius: 18px;
     text-align: left;
     padding-bottom: 3vh;
-    padding-right: 10px;
+    padding-right: px;
 }
 
 .bienvenida_tarjeta:hover {
@@ -294,7 +299,11 @@ i.bi {
 .main__medio-cobro .container__global {
     display: flex;
     flex-direction: column;
-    gap: 45px; /* separación ENTRE LAS 4 TARJETAS */
+    gap: 45px;
+    /* separación ENTRE LAS 4 TARJETAS */
+    max-width: 930px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .main__medio-cobro-tarjeta {
@@ -307,7 +316,7 @@ i.bi {
     gap: 110px;
     max-width: 950px;
     width: 100%;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .main__medio-cobro-tarjeta h2 {
@@ -335,7 +344,9 @@ i.bi {
 }
 
 .main__medio-cobro-tarjeta img {
-    max-width: 300px;
+    max-width: 400px;
+    min-width: 200px;
+    width: 100%;
     flex: 1;
     justify-content: center;
     transition: transform 0.3s ease-in-out;
@@ -353,15 +364,16 @@ i.bi {
     align-items: flex-start;
     gap: 16px;
     max-width: 100%;
-    flex: 1 1 320px;
+    flex: 1 1 100px;
 }
 
 .medio-cobro-tarjeta1-img,
 .medio-cobro-tarjeta2-img {
     flex: 1;
+    /* ocupa mitad disponible */
     display: flex;
     justify-content: center;
-    width: 400px;
+    align-items: center;
 }
 
 
@@ -377,12 +389,13 @@ i.bi {
     padding-bottom: 3vh;
     box-sizing: content-box;
     background-color: var(--color-principal-50);
+    box-sizing: border-box;
 }
 
 .footer__container .container__global {
     display: flex;
     flex-direction: column;
-    max-width: 920px;
+    max-width: 950px;
     width: 100%;
 }
 
@@ -453,8 +466,29 @@ i.bi {
 }
 
 /*=======767PX=======/ Alarga btn Historias que Vuelan + Se apilan las (4) ul del footer + logo-mini al centro*/
+
+
 @media (max-width: 767px) {
-    /*Historias que vuelan*/ 
+
+    /*3 tarjetas bienvenida*/
+    .main__bienvenida_tarjetas {
+        display: grid;
+    }
+
+    .bienvenida_tarjeta {
+        background: var(--color-principal-50);
+        border-radius: 18px;
+        text-align: left;
+        padding-bottom: 10px;
+        display: grid;
+        justify-items: start;
+        width: 100%;
+        max-width: 730px;
+    }
+
+
+
+    /*Historias que vuelan*/
     .historias-vuelan-card {
         display: flex;
         flex-direction: column;
@@ -473,23 +507,34 @@ i.bi {
         width: 100%;
         margin-top: 1em;
     }
-    /*Medio cobro ideal (4tarjetas)*/ 
-    .main__medio-cobro-tarjeta{
+
+    /*Medio cobro ideal (4tarjetas)*/
+    .main__medio-cobro-tarjeta {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap-reverse;
-}
+    }
 
-    .btn-medios{
+    .btn-medios {
         display: flex;
         width: 100%;
     }
-    /*Footer*/ 
+
+    /*Footer*/
     .footer__lista-opciones {
-        display: flex;
-        flex-flow: wrap;
-        padding: 10px 85px 0px;
+        display: grid;
+        /* 🔥 CAMBIO */
+        grid-template-columns: 1fr 1fr;
+        /* 2 columnas */
+        gap: 32px 24px;
+        /* filas / columnas */
+        justify-items: start;
+    }
+
+    /* CADA UL */
+    .footer__lista-opciones ul {
+        padding: 0;
     }
 
     .footer__container {
@@ -499,20 +544,10 @@ i.bi {
     .footer__logo-mobile {
         display: flex;
         position: relative;
-        left: 50%;
+        justify-content: center;
     }
-
 }
 
 
-/*=======756PX=======/ Se apilan las (3) tarj de bienvenida*/
-@media (max-width: 756px) {
-
-
-}
-
-/*=======992=======*/
-@media {
-    max-width: 992px;
-
-}
+/*=======..........=======*/
+@media (max-width: 756px) {}
