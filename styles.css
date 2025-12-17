@@ -21,12 +21,12 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: var(--color-principal-100);
 }
 
-.container__global{
-    max-width: 1200px;
+.container__global {
+    max-width: 1022px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 24px;
@@ -34,21 +34,22 @@ body{
 }
 
 /* --HEADER GLOBAL-- */
-header{
+header {
     background-color: var(--color-principal-50);
     z-index: 1000;
     top: 0;
     position: sticky;
+    width: 99vw;
 }
 
-.header__container{
+.header__container {
     display: flex;
     justify-content: center;
     align-items: center;
     border-bottom: solid 1px #e7eaed;
     font-weight: bold;
     font-size: 13px;
-    max-width: 1000px;
+    max-width: 100%;
     margin: 0 auto;
     gap: 10px;
     height: 72px;
@@ -56,9 +57,16 @@ header{
 
 /* --HEADER-LOGO-- */
 
+.header_logo-mini {
+    display: none;
+}
+
+.btn-list {
+    display: none;
+}
 
 /* --HEADER-CENTRO-NAV-- */
-.header__nav ul{
+.header__nav ul {
     list-style: none;
     display: flex;
     align-content: space-between;
@@ -66,11 +74,11 @@ header{
     padding-left: 10px;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-.header__nav a{
+.header__nav a {
     color: #2b2b2b;
     white-space: nowrap;
     padding: 12px;
@@ -80,13 +88,13 @@ a{
     margin: 7px;
 }
 
-.header__nav a:hover{
+.header__nav a:hover {
     background-color: var(--color-pricipal-300_fondo);
     transition: background-color 0.2s ease-in-out;
 }
 
 /* --HEADER-FUNCIONES DERECHA-- */
-.divisor{
+.divisor {
     width: 0.9px;
     height: 22px;
     background-color: #d1d1d1;
@@ -95,19 +103,19 @@ a{
     margin-left: 0;
 }
 
-.header__functions{
+.header__functions {
     display: flex;
     gap: 10px;
     padding-right: 20px;
 }
 
 .header__functions a,
-.btn-medios{
+.btn-medios {
     white-space: nowrap;
     width: 140px;
 }
 
-.btn-pill{
+.btn-pill {
     border: solid 1px var(--color-principal-800);
     width: 147px;
     height: 40px;
@@ -122,26 +130,26 @@ a{
     justify-content: center;
 }
 
-.btn-full{
+.btn-full {
     background-color: var(--color-principal-800);
     color: #FCFBFF;
 }
 
-.btn-full:hover{
+.btn-full:hover {
     background-color: var(--color-pricipal-300_fondo);
     border-color: var(--color-principal-800);
     color: var(--color-principal-850_violeta-oscuro);
     transition: background-color 0.3s ease-in-out;
 }
 
-.btn-empty{
+.btn-empty {
     background-color: var(--color-principal-50);
     color: var(--color-principal-800);
     transition: background-color 0.3s ease-in-out;
 }
 
 .btn-empty:hover,
-.bienvenida_tarjeta:hover .bi{
+.bienvenida_tarjeta:hover .bi {
     color: #360C72;
     background-color: var(--color-pricipal-300_fondo);
     transition: background-color 0.3s ease-in-out;
@@ -150,37 +158,37 @@ a{
 /*--CUERPO-BIENVENIDA--*/
 
 .main__bienvenida,
-.main__medio-cobro{
+.main__medio-cobro {
     text-align: center;
 }
 
-h1{
+h1 {
     letter-spacing: -1.6px;
     font-weight: 799;
-    font-size: 37px;
+    font-size: 2.3em;
     color: var(--color-principal-900);
-    margin-bottom: 3rem;
+    margin-bottom: 1em;
 }
 
-h3{
+h3 {
     color: #2C2C2C;
     font-size: 21px;
 }
 
-p{
+p {
     color: #6A6A6A;
     letter-spacing: 0.75px;
     line-height: 25px;
 }
 
-.main__bienvenida_tarjetas{
+.main__bienvenida_tarjetas {
     display: flex;
     gap: 24px;
     justify-content: center;
     margin-bottom: 20px;
 }
 
-.bienvenida_tarjeta{
+.bienvenida_tarjeta {
     background: var(--color-principal-50);
     width: 290px;
     padding: 20px;
@@ -189,12 +197,13 @@ p{
     padding-bottom: 3vh;
     padding-right: 10px;
 }
-.bienvenida_tarjeta:hover{
+
+.bienvenida_tarjeta:hover {
     transform: translateY(-5px);
     transition: 0.3s ease-in-out 0.1s;
 }
 
-.bi{
+.bi {
     width: 52px;
     height: 52px;
     background: #f3eaff;
@@ -206,17 +215,17 @@ p{
     color: #652BDF;
 }
 
-i.bi{
+i.bi {
     font-size: 20px;
 }
 
 /*--MAIN-HISTORIAS QUE VUELAN--*/
-.main__historias-vuelan{
+.main__historias-vuelan {
     width: 100%;
     margin: 30px 0;
 }
 
-.historias-vuelan-card{
+.historias-vuelan-card {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -226,38 +235,39 @@ i.bi{
     padding: 32px 60px;
     max-width: 930px;
     margin: 0 auto;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
 
-.historias-vuelan-letras h2{
-    font-size: 27px;
-    margin-bottom: 8px;
+.historias-vuelan-letras h2 {
+    font-size: 24px;
     letter-spacing: -0.5px;
 }
 
-.historias-vuelan-letras p{
+.historias-vuelan-letras p {
     font-size: 17px;
     color: var(--color-principal-50);
     letter-spacing: 0.5px;
     opacity: .9;
+    padding: 0px;
 }
 
-.btn-vuelan{
+.btn-vuelan {
     border-color: transparent;
+    width: 180px;
+    white-space: nowrap;
 }
 
-.btn-vuelan:hover{
+.btn-vuelan:hover {
     background-color: black;
     color: var(--color-principal-50);
 }
 
-
 /*--MAIN-MEDIO DE COBRO IDEAL--*/
 
-.main__medio-cobro .container__global{
+.main__medio-cobro .container__global {
     display: flex;
-    max-width: 930px;
+    max-width: 950px;
     width: 100%;
     text-align: center;
     justify-content: center;
@@ -265,48 +275,49 @@ i.bi{
 
 }
 
-.main__medio-cobro h1{
+.main__medio-cobro h1 {
     font-size: 38px;
     margin-bottom: 0px;
 }
 
-.main__medio-cobro p{
+.main__medio-cobro p {
     font-size: 13px;
     font-weight: 530;
 }
 
-.main__medio-cobro{
+.main__medio-cobro {
     display: flex;
     flex-direction: column;
     padding: 0px;
 }
 
-.main__medio-cobro .container__global{
+.main__medio-cobro .container__global {
     display: flex;
     flex-direction: column;
     gap: 45px; /* separación ENTRE LAS 4 TARJETAS */
 }
 
-.main__medio-cobro-tarjeta{
+.main__medio-cobro-tarjeta {
     display: flex;
     background-color: var(--color-principal-50);
     border-radius: 30px;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
-    gap: 40px;
-    max-width: 930px;
+    padding: 25px;
+    gap: 110px;
+    max-width: 950px;
     width: 100%;
     flex-wrap: wrap;
 }
 
-.main__medio-cobro-tarjeta h2{
+.main__medio-cobro-tarjeta h2 {
     font-weight: 600;
-    font-family: "Inter",Arial,Helvetica,sans-serif;
-    font-size: 27px;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    line-height: 32px;
 }
 
-.main__medio-cobro-tarjeta p{
+.main__medio-cobro-tarjeta p {
     margin: 14px 0;
     font-size: 16px;
     color: var(--color-principal-900);
@@ -316,27 +327,27 @@ i.bi{
     padding-bottom: 50px;
 }
 
-.btn-medios:hover{
+.btn-medios:hover {
     background-color: var(--color-principal-850_violeta-oscuro);
     border-color: var(--color-principal-800);
     transition: background-color 0.5s ease-in-out;
     color: var(--color-principal-100);
 }
 
-.main__medio-cobro-tarjeta img{
+.main__medio-cobro-tarjeta img {
     max-width: 300px;
     flex: 1;
     justify-content: center;
     transition: transform 0.3s ease-in-out;
-    overflow-clip-margin: var(--color-principal-850_violeta-oscuro) ;
+    overflow-clip-margin: var(--color-principal-850_violeta-oscuro);
 }
 
-.main__medio-cobro-tarjeta img:hover{
+.main__medio-cobro-tarjeta img:hover {
     transform: scale(1.04);
 }
 
 .medio-cobro-tarjeta1,
-.medio-cobro-tarjeta2{
+.medio-cobro-tarjeta2 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -346,7 +357,7 @@ i.bi{
 }
 
 .medio-cobro-tarjeta1-img,
-.medio-cobro-tarjeta2-img{
+.medio-cobro-tarjeta2-img {
     flex: 1;
     display: flex;
     justify-content: center;
@@ -354,48 +365,154 @@ i.bi{
 }
 
 
-.medio-cobro-tarjeta2-reverse{
+.medio-cobro-tarjeta2-reverse {
     flex-direction: row-reverse;
 }
 
 /*--FOOTER--*/
-.footer__container{
+.footer__container {
     width: 100%;
     margin-top: 8vh;
     padding-top: 3vh;
-    margin-bottom: 3vh;
+    padding-bottom: 3vh;
     box-sizing: content-box;
     background-color: var(--color-principal-50);
 }
 
-.footer__container .container__global{
+.footer__container .container__global {
     display: flex;
     flex-direction: column;
-    max-width: 950px;
+    max-width: 920px;
     width: 100%;
 }
 
-.footer__container ul{
+.footer__container ul {
     flex-wrap: nowrap;
     list-style: none;
     padding-top: 1vh;
 }
 
-.footer__lista-opciones{
+.footer__lista-opciones {
     display: flex;
     align-items: first baseline;
-    gap: 50px;
+    gap: 100px;
     flex-wrap: nowrap;
 }
 
-.footer__lista-opciones h3{
+.footer__lista-opciones h3 {
     font-size: 0.9em;
     white-space: nowrap;
 }
 
-.footer__lista-opciones li a{
+.footer__lista-opciones li a {
     color: #2b2b2b;
     font-size: 0.78em;
     letter-spacing: 0.5px;
     line-height: 30px;
+}
+
+/* -------------------- */
+/* MEDIA QUERIES */
+/* -------------------- */
+
+/*=======991PX=======/Se contrae el menú y aparece logo mini y list*/
+@media (max-width: 991px) {
+
+    .header_logo,
+    .header__nav,
+    .divisor,
+    .header__functions {
+        display: none;
+    }
+
+    .header__container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 72px;
+        padding: 0 16px;
+    }
+
+    .btn-list {
+        display: flex;
+        font-size: 26px;
+        color: #2C2C2C;
+        font-weight: bolder;
+        z-index: 2;
+    }
+
+    .header_logo-mini {
+        display: flex;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -45%);
+        /* ⬅ lo sube y centra un poco */
+    }
+}
+
+/*=======767PX=======/ Alarga btn Historias que Vuelan + Se apilan las (4) ul del footer + logo-mini al centro*/
+@media (max-width: 767px) {
+    /*Historias que vuelan*/ 
+    .historias-vuelan-card {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        border-color: transparent;
+        width: 100%;
+        max-width: 767px;
+    }
+
+    .historias-vuelan-card h2 {
+        font-size: 1.2em;
+        display: inline-table;
+    }
+
+    .btn-vuelan {
+        width: 100%;
+        margin-top: 1em;
+    }
+    /*Medio cobro ideal (4tarjetas)*/ 
+    .main__medio-cobro-tarjeta{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap-reverse;
+}
+
+    .btn-medios{
+        display: flex;
+        width: 100%;
+    }
+    /*Footer*/ 
+    .footer__lista-opciones {
+        display: flex;
+        flex-flow: wrap;
+        padding: 10px 85px 0px;
+    }
+
+    .footer__container {
+        min-width: 300px;
+    }
+
+    .footer__logo-mobile {
+        display: flex;
+        position: relative;
+        left: 50%;
+    }
+
+}
+
+
+/*=======756PX=======/ Se apilan las (3) tarj de bienvenida*/
+@media (max-width: 756px) {
+
+
+}
+
+/*=======992=======*/
+@media {
+    max-width: 992px;
+
 }
