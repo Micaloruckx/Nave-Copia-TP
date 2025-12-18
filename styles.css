@@ -21,10 +21,6 @@
     box-sizing: border-box;
 }
 
-html. body {
-    overflow-x: hidden;
-}
-
 body {
     background-color: var(--color-principal-100);
 }
@@ -51,7 +47,7 @@ header {
     justify-content: center;
     align-items: center;
     border-bottom: solid 1px #e7eaed;
-    font-weight: bold;
+    font-weight: bolder;
     font-size: 13px;
     max-width: 100%;
     margin: 0 auto;
@@ -116,14 +112,12 @@ a {
 .header__functions a,
 .btn-medios {
     white-space: nowrap;
-    width: 140px;
 }
 
 .btn-pill {
     border: solid 1px var(--color-principal-800);
     width: 147px;
-    height: 40px;
-    font-size: 13px;
+    height: 38px;
     font-weight: 600;
     padding: 8px 20px;
     border-radius: 50px;
