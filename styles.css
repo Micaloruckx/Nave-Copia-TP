@@ -11,6 +11,8 @@
     --color-principal-800: #652BDF;
     --color-principal-850_violeta-oscuro: #360C72;
     --color-principal-900: #2b2b2b;
+    --text-primary: #1f1f1f;
+    --text-secondary: #6a6a6a;
 
 }
 
@@ -23,6 +25,8 @@
 
 body {
     background-color: var(--color-principal-100);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .container__global {
@@ -31,6 +35,26 @@ body {
     margin-right: auto;
     padding-left: 24px;
     padding-right: 24px;
+}
+
+/*FUENTES*/
+
+body {
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+    letter-spacing: -0.3px;
+}
+
+p {
+    font-weight: 500;
+    letter-spacing: 0.1px;
+    color: var(--text-secondary);
 }
 
 /* --HEADER GLOBAL-- */
@@ -48,7 +72,6 @@ header {
     align-items: center;
     border-bottom: solid 1px #e7eaed;
     font-weight: bolder;
-    font-size: 13px;
     max-width: 100%;
     margin: 0 auto;
     gap: 10px;
@@ -163,9 +186,7 @@ a {
 
 h1 {
     letter-spacing: -1.6px;
-    font-weight: 799;
     font-size: 2.3em;
-    color: var(--color-principal-900);
     margin-bottom: 1em;
 }
 
@@ -176,8 +197,8 @@ h3 {
 
 p {
     color: #6A6A6A;
-    letter-spacing: 0.75px;
-    line-height: 25px;
+    letter-spacing: 0.1px;
+    line-height: 1.5;
 }
 
 .main__bienvenida_tarjetas {
@@ -275,13 +296,8 @@ i.bi {
 }
 
 .main__medio-cobro h1 {
-    font-size: 38px;
+    font-size: 30px;
     margin-bottom: 0px;
-}
-
-.main__medio-cobro p {
-    font-size: 13px;
-    font-weight: 530;
 }
 
 .main__medio-cobro {
@@ -313,18 +329,8 @@ i.bi {
     flex-wrap: nowrap;
 }
 
-.main__medio-cobro-tarjeta h2 {
-    font-weight: 600;
-    font-family: "Inter", Arial, Helvetica, sans-serif;
-    font-size: 30px;
-    line-height: 32px;
-}
-
 .main__medio-cobro-tarjeta p {
     margin: 14px 0;
-    font-size: 16px;
-    color: var(--color-principal-900);
-    max-width: 100%;
     word-spacing: 0.5px;
     text-align: start;
     padding-bottom: 50px;
@@ -504,10 +510,31 @@ i.bi {
 
     /*Medio cobro ideal (4tarjetas)*/
     .main__medio-cobro-tarjeta {
-        display: flex;
-        justify-content: center;
+        flex-direction: column-reverse;
         align-items: center;
-        flex-wrap: wrap-reverse;
+        justify-content: center;
+        text-align: center;
+        padding: 24px;
+        /* menos padding para no estirar */
+        gap: 16px;
+    }
+
+    .main__medio-cobro-tarjeta img {
+        max-width: 70%;
+        height: auto;
+        margin-top: 8px;
+    }
+
+    .main__medio-cobro-tarjeta h2 {
+        font-size: 1.6rem;
+        /* Tamaño un poco menor, más compacto */
+        margin-bottom: 8px;
+    }
+
+    .main__medio-cobro-tarjeta p {
+        font-size: 1rem;
+        margin: 0;
+        padding: 0;
     }
 
     .btn-medios {
