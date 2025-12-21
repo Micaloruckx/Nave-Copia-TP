@@ -46,7 +46,9 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-weight: 600;
     letter-spacing: -0.3px;
 }
@@ -63,7 +65,8 @@ header {
     z-index: 1000;
     top: 0;
     position: sticky;
-    width: 100vw;
+    width: 99vw;
+    max-width: 100%;
 }
 
 .header__container {
@@ -109,6 +112,7 @@ a {
     padding-right: 15px;
     border-radius: 50px;
     margin: 7px;
+    font-size: 13px;
 }
 
 .header__nav a:hover {
@@ -155,6 +159,9 @@ a {
     background-color: var(--color-principal-800);
     color: #FCFBFF;
     transition: background-color 0.3s ease-in-out;
+    white-space: nowrap;
+    width: max-content;
+    padding: 0px 2em;
 }
 
 .btn-full:hover {
@@ -177,6 +184,56 @@ a {
     transition: background-color 0.3s ease-in-out;
 }
 
+/*--Cobras con Nave, tu negocio vuela*/
+.main__inicio {
+    display: flex;
+    max-width: 70%;
+    align-items: center;
+}
+
+.main__inicio_img img {
+    border-radius: 25px;
+    max-width: 990px;
+    min-width: 820px;
+    width: 100%;
+    flex: 1;
+    justify-content: center;
+}
+
+.main__inicio_text-img {
+    position: absolute;
+    margin: 60px;
+}
+
+.main__inicio_text-img h1 {
+    color: var(--color-principal-100);
+    font-weight: 700;
+    font-size: 43px;
+    margin: 0px;
+}
+
+.main__inicio_text-img h3 {
+    font-size: 22px;
+    font-weight: 300;
+    color: var(--text-primary);
+    opacity: 0.8;
+    margin: 15px 0px;
+}
+
+.btn-iniciar {
+    padding: 0 38px;
+    margin: 20px 0px;
+    height: 3em;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.btn-iniciar:hover {
+    background-color: var(--color-principal-850_violeta-oscuro);
+    color: var(--color-principal-100);
+    transition: background-color 0.3s ease-in-out;
+}
+
 /*--CUERPO-BIENVENIDA--*/
 
 .main__bienvenida,
@@ -188,6 +245,7 @@ h1 {
     letter-spacing: -1.6px;
     font-size: 2.3em;
     margin-bottom: 1em;
+    margin-top: 1em;
 }
 
 h3 {
@@ -210,12 +268,11 @@ p {
 
 .bienvenida_tarjeta {
     background: var(--color-principal-50);
-    width: 290px;
+    max-width: 290px;
     padding: 20px;
     border-radius: 18px;
     text-align: left;
     padding-bottom: 3vh;
-    padding-right: px;
 }
 
 .bienvenida_tarjeta:hover {
@@ -253,7 +310,7 @@ i.bi {
     color: var(--color-principal-50);
     border-radius: 28px;
     padding: 32px 60px;
-    max-width: 930px;
+    max-width: 900px;
     margin: 0 auto;
     margin-bottom: 60px;
 }
@@ -276,6 +333,7 @@ i.bi {
     border-color: transparent;
     width: 180px;
     white-space: nowrap;
+    margin-left: 75px;
 }
 
 .btn-vuelan:hover {
@@ -310,7 +368,6 @@ i.bi {
     display: flex;
     flex-direction: column;
     gap: 45px;
-    /* separación ENTRE LAS 4 TARJETAS */
     max-width: 930px;
     width: 100%;
     margin: 0 auto;
@@ -350,7 +407,14 @@ i.bi {
     flex: 1;
     justify-content: center;
     transition: transform 0.3s ease-in-out;
-    overflow-clip-margin: var(--color-principal-850_violeta-oscuro);
+}
+
+.medio-cobro-tarjeta1-img {
+    margin-right: 30px;
+}
+
+.medio-cobro-tarjeta2-img {
+    margin-left: 40px;
 }
 
 .main__medio-cobro-tarjeta img:hover {
@@ -367,15 +431,14 @@ i.bi {
     flex: 1 1 100px;
 }
 
+
 .medio-cobro-tarjeta1-img,
 .medio-cobro-tarjeta2-img {
     flex: 1;
-    /* ocupa mitad disponible */
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 
 .medio-cobro-tarjeta2-reverse {
     flex-direction: row-reverse;
@@ -438,6 +501,22 @@ i.bi {
         display: none;
     }
 
+    .main__inicio {
+        display: flex;
+        max-width: 100%;
+        align-items: center;
+    }
+
+    .main__inicio img {
+        min-width: 600px;
+    }
+
+    .main__inicio_text-img h1,
+    .main__inicio_text-img h3 {
+        font-size: 1.5rem;
+        color: var(--color-principal-100);
+    }
+
     .header__container {
         position: relative;
         display: flex;
@@ -461,7 +540,22 @@ i.bi {
         left: 50%;
         top: 50%;
         transform: translate(-50%, -45%);
-        /* ⬅ lo sube y centra un poco */
+    }
+
+    .main__bienvenida h1 {
+        font-size: ;
+        letter-spacing: -1.4px;
+        font-size: 1.7em;
+        margin-bottom: 1.2em;
+    }
+
+    .main__bienvenida {
+        margin: 0 25px;
+    }
+
+    .bienvenida_tarjeta h3 {
+        color: #2C2C2C;
+        font-size: 18px;
     }
 }
 
@@ -469,8 +563,26 @@ i.bi {
 
 
 @media (max-width: 767px) {
+    .main__inicio img {
+        min-width: 400px;
+        min-height: fit-content;
+    }
 
-    /*3 tarjetas bienvenida*/
+    .main__inicio_text-img h1,
+    .main__inicio_text-img h3 {
+        font-size: 1.1rem;
+        color: var(--color-principal-100);
+        opacity: 1;
+        padding: 0;
+        margin: 0;
+    }
+
+    .btn-iniciar{
+        font-size: small;
+        margin: 0;
+        padding: 0px 10px;
+    }
+
     .main__bienvenida_tarjetas {
         display: grid;
     }
@@ -483,10 +595,8 @@ i.bi {
         display: grid;
         justify-items: start;
         width: 100%;
-        max-width: 730px;
+        max-width: 1030px;
     }
-
-
 
     /*Historias que vuelan*/
     .historias-vuelan-card {
@@ -495,7 +605,7 @@ i.bi {
         align-items: start;
         border-color: transparent;
         width: 100%;
-        max-width: 767px;
+        max-width: 595px;
     }
 
     .historias-vuelan-card h2 {
@@ -506,6 +616,7 @@ i.bi {
     .btn-vuelan {
         width: 100%;
         margin-top: 1em;
+        margin-left: 0px;
     }
 
     /*Medio cobro ideal (4tarjetas)*/
