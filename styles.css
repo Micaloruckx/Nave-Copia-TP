@@ -187,7 +187,6 @@ a {
 /*--Cobras con Nave, tu negocio vuela*/
 .main__inicio {
     display: flex;
-    max-width: 70%;
     align-items: center;
 }
 
@@ -564,7 +563,7 @@ i.bi {
 
 @media (max-width: 767px) {
     .main__inicio img {
-        min-width: 400px;
+        min-width: 300px;
         min-height: fit-content;
     }
 
@@ -682,4 +681,17 @@ i.bi {
 
 
 /*=======..........=======*/
-@media (max-width: 756px) {}
+@media (max-width: 550px) {
+    .main__inicio img {
+        min-width: 200px;
+        min-height: fit-content;
+    }
+    .main__inicio_text-img h3 {
+        display: none;
+    }
+        .btn-iniciar{
+        font-size: 0.7em;
+        margin: 0;
+        height: fit-content;
+    }
+}
